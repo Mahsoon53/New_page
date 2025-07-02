@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title> حسین سبزواری</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Mahsoon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
 
     body {
       font-family: 'Vazirmatn', sans-serif;
-      background: linear-gradient(to bottom, #f5f0ec, #eae7df);
       margin: 0;
       padding: 0;
+      background: linear-gradient(to bottom, #fcfbf7, #eceae6);
       color: #333;
       text-align: center;
     }
 
     header {
-      padding: 2rem 1rem;
-      background-color: #784f36;
+      background-color: #5c4432;
       color: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    h1 {
+    header h1 {
       margin: 0;
       font-size: 2rem;
     }
@@ -32,45 +32,84 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      padding: 2rem;
+      gap: 1.2rem;
+      padding: 2rem 1rem;
     }
 
-    .btn {
-      padding: 1rem 1.5rem;
-      border: none;
+    a.btn, button.btn {
+      text-decoration: none;
+      background: linear-gradient(145deg, #e7e4dd, #fff);
+      color: #333;
       border-radius: 12px;
-      background: linear-gradient(145deg, #dadada, #f0f0f0);
-      box-shadow: 5px 5px 15px #bebebe,
-                  -5px -5px 15px #ffffff;
+      box-shadow: 5px 5px 15px #ccc, -5px -5px 15px #fff;
+      padding: 1rem 1.7rem;
       font-size: 1rem;
+      border: none;
       cursor: pointer;
       transition: all 0.3s ease;
     }
 
-    .btn:hover {
+    a.btn:hover, button.btn:hover {
       transform: scale(1.05);
-      box-shadow: 4px 4px 10px #aaa,
-                  -4px -4px 10px #fff;
-    }
-
-    .section-title {
-      font-size: 1.3rem;
-      margin-top: 2rem;
-      color: #444;
+      box-shadow: 4px 4px 10px #aaa, -4px -4px 10px #fff;
     }
 
     footer {
       padding: 2rem 1rem;
-      background-color: #f2f2f2;
-      border-top: 1px solid #ddd;
-      font-size: 0.9rem;
+      background-color: #f7f7f7;
+      border-top: 1px solid #ccc;
     }
 
     .logo {
-      max-width: 120px;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      width: 100px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== Modal Styles ===== */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      padding-top: 60px;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: #fffaf1;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+      text-align: right;
+    }
+
+    .close {
+      color: #444;
+      position: absolute;
+      top: 10px; left: 15px;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .audio-item {
+      margin: 1.5rem 0;
+    }
+
+    @media (max-width: 600px) {
+      a.btn, button.btn {
+        font-size: 0.95rem;
+        padding: 0.8rem 1.2rem;
+      }
+
+      .modal-content {
+        padding: 1.5rem 1rem;
+      }
     }
   </style>
 </head>
@@ -81,18 +120,42 @@
   </header>
 
   <div class="buttons">
-  <div class="buttons">
-  <a href="about.html" class="btn">📜 دربارهٔ شاعر</a>
-  <a href="shahrha.html" class="btn">✍️ اشعار</a>
-  <a href="clip.html" class="btn">🎬 کلیپ‌ها</a>
-  <a href="taraneha.html" class="btn">🎼 ترانه‌ها</a>
-  <a href="social.html" class="btn">🌐 شبکه‌های اجتماعی</a>
+    <a href="about.html" class="btn">📜 دربارهٔ شاعر</a>
+    <a href="shahrha.html" class="btn">✍️ اشعار</a>
+    <button class="btn" onclick="document.getElementById('modalDakaleme').style.display='block'">🎙️ دکلمه‌ها</button>
+    <a href="clip.html" class="btn">🎬 کلیپ‌ها</a>
+    <a href="taraneha.html" class="btn">🎼 ترانه‌ها</a>
+    <a href="social.html" class="btn">🌐 شبکه‌های اجتماعی</a>
   </div>
 
   <footer>
-    <img src="https://i.postimg.cc/d3fjW81G/IMG-20250702-174023-719.jpg" alt="لوگو حسین سبزواری" class="logo"><br>
-    طراحی شده توسط حسین سبزواری
+    <img src="https://i.postimg.cc/8zWTBkhf/transparent-logo-hosein.png" alt="لوگوی حسین سبزواری" class="logo" />
+    <div>طراحی شده توسط حسین سبزواری</div>
   </footer>
+
+  <!-- Modal دکلمه -->
+  <div id="modalDakaleme" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('modalDakaleme').style.display='none'">×</span>
+      <h2>🎧 دکلمه‌ها</h2>
+
+      <div class="audio-item">
+        <p><strong>شعر «غفلت»</strong></p>
+        <audio controls>
+          <source src="https://t.me/hosein_sabzevari/151" type="audio/mpeg">
+          مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+        </audio>
+      </div>
+
+      <div class="audio-item">
+        <p><strong>شعر «شاعرکُشی»</strong></p>
+        <audio controls>
+          <source src="https://t.me/hosein_sabzevari/7" type="audio/mpeg">
+          مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+        </audio>
+      </div>
+    </div>
+  </div>
 
 </body>
   </html>
