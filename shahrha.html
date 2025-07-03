@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اشعار حسین سبزواری</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(to bottom, #fcfbf7, #eceae6);
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .poem-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .btn {
+      background: linear-gradient(145deg, #e7e4dd, #fff);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 4px 4px 10px #bbb, -4px -4px 10px #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* === Modal === */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0; top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #fffaf1;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+      text-align: right;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 1.8rem;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .poem-text {
+      font-size: 1.1rem;
+      line-height: 2.2rem;
+      white-space: pre-line;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✍️ اشعار حسین سبزواری</h1>
+
+  <div class="poem-buttons">
+    <button class="btn" onclick="document.getElementById('modal-1').style.display='block'">«غفلت»</button>
+    <button class="btn" onclick="document.getElementById('modal-2').style.display='block'">«شاعرکُشی»</button>
+    <button class="btn" onclick="document.getElementById('modal-3').style.display='block'">«فریب»</button>
+    <button class="btn" onclick="document.getElementById('modal-4').style.display='block'">«مرموز»</button>
+    <button class="btn" onclick="document.getElementById('modal-5').style.display='block'">«دلتنگی»</button>
+  </div>
+
+  <!-- Modal 1 -->
+  <div id="modal-1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
+      <h2>🖋️ شعر «غفلت»</h2>
+      <div class="poem-text">
+        عنانمان همه در دست عده‌ای مؤمن  
+        که سر به سجده ولی کافرند در باطن  
+
+        دچار غفلت خوابیم و دردِ بیداری  
+        دوان دوان پی رویای دور و ناممکن  
+
+        نفس کشیدن مان هم خودش معمائی‌ست  
+        در این هوای کثیفِ بدون اکسیژن  
+
+        جنازه‌های کبودی درون تابوتیم  
+        به اسمِ زندگیِ در شرایطی ایمِن  
+
+        جوان و پیر ندارد، شبیه اندوهیم  
+        اسیر چرخه‌ی حسرت شدیم با هر سن
+
+        #حسین_سبزواری
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal-2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
+      <h2>🖋️ شعر «شاعرکُشی»</h2>
+      <div class="poem-text">
+        گلو خودش پُرِ سرب‌است جنگ جایز نیست  
+        برای سینه‌ی زخمی فشنگ جایز نیست  
+
+        میانِ تاول شعرم دویده‌ام عمری  
+        نزن! که ضربه به پاهای لنگ جایز نیست  
+
+        ستونِ ارگِ دلم بی بهانه میلرزد  
+        درونِ من همه بم شد کلنگ جایز نیست  
+
+        قلم شکست و صدایش در استخوان پیچید  
+        غزل به دفتر ما سوخت انگ جایز نیست  
+
+        ترانه از نفس افتاد و بیصدا مُردم  
+        برای کشتنِ شاعر تفنگ جایز نیست
+
+        #حسین_سبزواری
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="modal-3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
+      <h2>🖋️ شعر «فریب»</h2>
+      <div class="poem-text">
+        دوباره مادرمان خوابِ سیب می‌بیند  
+        زنی که خورده زمین را... فریب می‌بیند  
+
+        به پشت پرده‌ی هر اتفاق مشکوکم  
+        حجابِ پنجره‌ ما را عجیب می‌بیند  
+
+        قلم به دست یهودای شعر می‌بینم  
+        غزل جواب خودش را صلیب می‌بیند  
+
+        صعود میکند از من، خیالِ کوهستان  
+        سقوط حادثه‌را عن‌قریب می‌بیند  
+
+        نقاب تازه برایم بیاورید امشب  
+        نگاهِ آینه من را غریب می‌بیند
+
+        #حسین_سبزواری
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div id="modal-4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
+      <h2>🖋️ شعر «مرموز»</h2>
+      <div class="poem-text">
+        هنوز منتظرم رو به عادتی مرموز  
+        کنار پنجره‌ام در اسارتی مرموز  
+
+        عبور می‌کند از کوچه میل پرسه زدن  
+        و دل نمیکَنمَ از استراحتی مرموز  
+
+        کسی درون خیالم مدام میگرید  
+        چه آمده به سرم در ندامتی مرموز؟  
+
+        سراب دست تکان می‌دهد که برگردم  
+        فریب میدهدَم با علامتی مرموز  
+
+        و فکر می‌کنم این روزها به آدمها  
+        عروسکانِ مطیعِ سیاستی مرموز  
+
+        میان جامعه و من تفاوتَ است اما  
+        همیشه حل شده‌ام در شباهتی مرموز  
+
+        چراغِ شعرِ دلم را نکرده‌ام خاموش  
+        اگرچه شهر پُرَ استَ از جهالتی مرموز  
+
+        رسیده فصل سرودن، زمان بیداری‌است  
+        ترانه میشِکفد از ‌شهامتی مرموز  
+
+        سکوتِ آینه از من شکست خواهد خورد  
+        نبردِ تن به تن استَ از رقابتی مرموز  
+
+        و می‌زند به سرم تا دوباره بِنْویسم  
+        از اعتصاب قلم تا شجاعتی مرموز  
+
+        که ما ادامه‌ی آن سیب سرخ اندوهیم  
+        در امتداد زنی مسخِ شهوتی مرموز  
+
+        در اعتراضِ به عصیان به خاک میغلتیم  
+        جوانه می‌زندَ اما رشادتی مرموز  
+
+        و می‌کِشد به به بغل جمعه شهر خونین را 
+پس از حوادث ننگین علتی مرموز 
