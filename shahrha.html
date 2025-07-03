@@ -38,13 +38,15 @@
       cursor: pointer;
       border: none;
       transition: transform 0.3s ease;
+      text-decoration: none;
+      color: inherit;
     }
 
     .btn:hover {
       transform: scale(1.05);
     }
 
-    /* === Modal === */
+    /* === مودال === */
     .modal {
       display: none;
       position: fixed;
@@ -66,20 +68,13 @@
       max-width: 600px;
       position: relative;
       text-align: right;
-      animation: fadeIn 1s ease;
+      animation: fadeIn 0.8s ease;
     }
 
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
+      from {opacity: 0; transform: translateY(30px);}
       to {opacity: 1; transform: translateY(0);}
-  @keyframes slideInUp {
-  from {opacity: 0; transform: translateY(30px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-.poem-text {
-  animation: slideInUp 1s ease forwards;
-        }  }
+    }
 
     .close {
       position: absolute;
@@ -96,6 +91,10 @@
       white-space: pre-line;
       margin-top: 1rem;
     }
+
+    .back-button {
+      margin-top: 3rem;
+    }
   </style>
 </head>
 <body>
@@ -110,7 +109,7 @@
     <button class="btn" onclick="document.getElementById('modal-5').style.display='block'">«دلتنگی»</button>
   </div>
 
-  <!-- Modal 1 -->
+  <!-- مودال‌ها -->
   <div id="modal-1" class="modal">
     <div class="modal-content">
       <span class="close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
@@ -136,7 +135,6 @@
     </div>
   </div>
 
-  <!-- Modal 2 -->
   <div id="modal-2" class="modal">
     <div class="modal-content">
       <span class="close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
@@ -162,7 +160,6 @@
     </div>
   </div>
 
-  <!-- Modal 3 -->
   <div id="modal-3" class="modal">
     <div class="modal-content">
       <span class="close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
@@ -183,12 +180,11 @@
         نقاب تازه برایم بیاورید امشب  
         نگاهِ آینه من را غریب می‌بیند
 
-        #حسین_سبزواری
+        ✒️ #حسین_سبزواری
       </div>
     </div>
   </div>
 
-  <!-- Modal 4 -->
   <div id="modal-4" class="modal">
     <div class="modal-content">
       <span class="close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
@@ -196,39 +192,21 @@
       <div class="poem-text">
         هنوز منتظرم رو به عادتی مرموز  
         کنار پنجره‌ام در اسارتی مرموز  
-
         عبور می‌کند از کوچه میل پرسه زدن  
         و دل نمیکَنمَ از استراحتی مرموز  
-
         کسی درون خیالم مدام میگرید  
         چه آمده به سرم در ندامتی مرموز؟  
-
         سراب دست تکان می‌دهد که برگردم  
         فریب میدهدَم با علامتی مرموز  
-
         و فکر می‌کنم این روزها به آدمها  
         عروسکانِ مطیعِ سیاستی مرموز  
-
         میان جامعه و من تفاوتَ است اما  
         همیشه حل شده‌ام در شباهتی مرموز  
-
         چراغِ شعرِ دلم را نکرده‌ام خاموش  
         اگرچه شهر پُرَ استَ از جهالتی مرموز  
-
         رسیده فصل سرودن، زمان بیداری‌است  
         ترانه میشِکفد از ‌شهامتی مرموز  
-
         سکوتِ آینه از من شکست خواهد خورد  
         نبردِ تن به تن استَ از رقابتی مرموز  
-
         و می‌زند به سرم تا دوباره بِنْویسم  
-        از اعتصاب قلم تا شجاعتی مرموز  
-
-        که ما ادامه‌ی آن سیب سرخ اندوهیم  
-        در امتداد زنی مسخِ شهوتی مرموز  
-
-        در اعتراضِ به عصیان به خاک میغلتیم  
-        جوانه می‌زندَ اما رشادتی مرموز  
-
-        و می‌کِشد به به بغل جمعه شهر خونین را 
-پس از حوادث ننگین علتی مرموز 
+        از اعتصاب قلم تا شجاعتی مرموز
