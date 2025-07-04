@@ -1,53 +1,76 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>ویدئوی شاعرانه</title>
+  <meta charset="UTF-8" />
+  <title>با هم ببینیم</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
     body {
-      background-color: #101010;
-      color: #fff;
-      font-family: 'Vazir', sans-serif;
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(to bottom, #fcfbf7, #eceae6);
+      color: #333;
       text-align: center;
-      padding: 50px;
+      margin: 0;
+      padding: 2rem 1rem;
     }
-    .video-container {
-      max-width: 720px;
-      margin: 0 auto;
-      border: 1px solid #eee;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
+
     video {
-      width: 100%;
-      height: auto;
-      border-bottom: 1px solid #444;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 6px 6px 20px #ccc, -6px -6px 20px #fff;
+      margin-bottom: 2rem;
     }
-    .download-link {
-      margin-top: 15px;
-      display: inline-block;
+
+    .back-button {
+      margin-top: 2rem;
+      animation: slideUp 1s ease;
     }
-    .download-link img {
-      width: 180px;
-      height: auto;
+
+    .btn-back {
+      background: linear-gradient(135deg, #ff6a00, #ffcc00);
+      color: #fff;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      box-shadow: 6px 6px 15px #aaa, -6px -6px 15px #fff;
+      font-size: 1.2rem;
       border: none;
       cursor: pointer;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-back:hover {
+      transform: scale(1.08);
+    }
+
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
-  <h1>تماشای ویدئو</h1>
-  <div class="video-container">
-    <video controls poster="thumbnail.jpg">
-      <source src="https://uupload.ir/view/vid_20241229_212123_434_sxx0.mp4/" type="video/mp4">
-      مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.
-    </video>
-    <div class="download-link">
-      <a href="https://uupload.ir/view/vid_20241229_212123_434_sxx0.mp4/" target="_blank">
-        <img src="https://s6.uupload.ir/css/images/udl6.png" alt="دانلود فایل با لینک مستقیم" />
-      </a>
-    </div>
+
+  <h1>🎥 کلیپ شاعرانه - شماره ۱</h1>
+
+  <video controls>
+    <source src="https://cdn.imgurl.ir/uploads/e62689_VID_20241006_151832_113.mp4" type="video/mp4" />
+    مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+  </video>
+
+  <div class="back-button">
+    <a href="index.html" class="btn-back"> برگرد صفحه قبلی</a>
   </div>
+
 </body>
 </html>
