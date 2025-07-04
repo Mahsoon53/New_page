@@ -92,64 +92,56 @@
       margin-top: 1rem;
     }
 
+    /* === دکمهٔ بازگشت نورایی === */
     .back-button {
-      margin-top: 3rem;
+      text-align: center;
+      margin-top: 4rem;
+      animation: pulseUp 1.2s ease;
+    }
+
+    .btn-back {
+      background: linear-gradient(145deg, #fff9cc, #fffde6);
+      color: #333;
+      font-weight: bold;
+      padding: 1rem 2.2rem;
+      border-radius: 14px;
+      box-shadow: 6px 6px 16px #ccc, -6px -6px 16px #fff;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-back::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,0,0.15);
+      transform: skewX(-30deg);
+      transition: left 0.8s ease;
+    }
+
+    .btn-back:hover::before {
+      left: 100%;
+    }
+
+    .btn-back:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+      background: linear-gradient(145deg, #fff6a5, #fffae0);
+    }
+
+    @keyframes pulseUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
-  .back-button {
-  text-align: center;
-  margin-top: 4rem;
-  animation: pulseUp 1.2s ease;
-}
-
-.btn-back {
-  background: linear-gradient(145deg, #fff9cc, #fffde6);
-  color: #333;
-  font-weight: bold;
-  padding: 1rem 2.2rem;
-  border-radius: 14px;
-  box-shadow: 6px 6px 16px #ccc, -6px -6px 16px #fff;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-back::before {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,0,0.15);
-  transform: skewX(-30deg);
-  transition: left 0.8s ease;
-}
-
-.btn-back:hover::before {
-  left: 100%;
-}
-
-.btn-back:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
-  background: linear-gradient(145deg, #fff6a5, #fffae0);
-}
-
-@keyframes pulseUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 </head>
 <body>
 
@@ -159,10 +151,11 @@
     <button class="btn" onclick="document.getElementById('modal-1').style.display='block'">«غفلت»</button>
     <button class="btn" onclick="document.getElementById('modal-2').style.display='block'">«شاعرکُشی»</button>
     <button class="btn" onclick="document.getElementById('modal-3').style.display='block'">«فریب»</button>
-    <div class="back-button">
-  <a href="index.html" class="btn-back">🔙 بازگشت به صفحهٔ اصلی</a>
-    </div>
-    
+  </div>
+
+  <!-- دکمهٔ بازگشت -->
+  <div class="back-button">
+    <a href="index.html" class="btn-back">🔙</a>
   </div>
 
   <!-- مودال‌ها -->
@@ -211,7 +204,7 @@
         ترانه از نفس افتاد و بیصدا مُردم  
         برای کشتنِ شاعر تفنگ جایز نیست
 
-      حسین_سبزواری
+        حسین_سبزواری
       </div>
     </div>
   </div>
@@ -241,7 +234,5 @@
     </div>
   </div>
 
-  <div id="modal-4" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
-  
+</body>
+</html>
