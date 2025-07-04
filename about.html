@@ -1,68 +1,103 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>دربارهٔ حسین سبزواری</title>
+  <meta charset="UTF-8" />
+  <title>دربارهٔ شاعر</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap");
+
     body {
       font-family: 'Vazirmatn', sans-serif;
-      background-color: #fefae0;
-      color: #222;
-      text-align: center;
-      padding: 2rem;
+      background: rgba(0,0,0,0.6);
       margin: 0;
+      padding: 0;
     }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    img {
-      max-width: 300px;
-      width: 90%;
+    .modal-content {
+      background: #fffaf1;
+      padding: 2rem;
       border-radius: 16px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
-      margin-bottom: 1.5rem;
+      max-width: 600px;
+      width: 90%;
+      position: relative;
+      text-align: right;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      animation: fadeUp 0.8s ease;
+      line-height: 2rem;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      font-size: 1.8rem;
+      color: #444;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #333;
     }
 
     p {
-      font-size: 1.2rem;
-      line-height: 2.2rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      padding: 0 1rem;
+      font-size: 1.05rem;
+      color: #555;
+      white-space: pre-line;
     }
 
-    a {
-      display: inline-block;
-      margin-top: 1rem;
-      text-decoration: none;
-      color: #fff;
-      background-color: #5c4432;
-      padding: 0.8rem 2rem;
-      border-radius: 10px;
-      font-size: 1rem;
-      box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-    }
-
-    a:hover {
-      background-color: #7a5a44;
+    .poet-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
 
-  <h1>دربارهٔ شاعر</h1>
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="window.location.href='index.html'">×</span>
+      <img src="https://s6.uupload.ir/files/img_20250702_161441_198_rbdi.jpg" alt="Hosein Sabzevari" class="poet-image" />
+      <h2>🖋️ دربارهٔ شاعر</h2>
+      <p>
+      حسین سبزواری شاعر و طراحی‌ست که مرزهای سنت و مدرنیته را با ظرافت می‌شکند.  
+      آثار او تلفیقی از نمادهای کلاسیک فارسی، دکلمه‌های معاصر، و حرکت‌های گرافیکی هماهنگ است.  
+      او با نگاه شاعرانه به تکنولوژی، از ابزارهای هوشمند برای آفرینش دنیای هنری خود استفاده می‌کند  
+      و تلاش دارد پل ارتباطی میان دیوان کهن و تجربه‌های بصری مدرن بسازد.
 
-  <img src="https://s6.uupload.ir/files/img_20250702_161441_198_rbdi.jpg" alt="حسین سبزواری">
-
-  <p>
-حسین سبزواری هستم علاقه‌مند به ادبیات.
-  </p>
-
-  <a href="index.html">بازگشت به صفحهٔ اصلی</a>
+      روحیهٔ جست‌وجوگر، وسواس در جزئیات و احترام به اصالت، شاخصهٔ اصلی مسیر هنری اوست.
+  
+      این صفحه آغازی‌ست بر سفری به عمق ذهن خلاق و صدای شاعرانه‌ی یک هنرمند مستقل.
+      </p>
+    </div>
+  </div>
 
 </body>
 </html>
