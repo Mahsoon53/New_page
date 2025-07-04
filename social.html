@@ -23,9 +23,10 @@
 
     .social-container {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1.5rem;
-      max-width: 400px;
+      max-width: 500px;
       margin: auto;
     }
 
@@ -35,26 +36,21 @@
       border-radius: 12px;
       box-shadow: 4px 4px 12px #ccc, -4px -4px 12px #fff;
       transition: transform 0.3s ease;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .social-item:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    .social-item img {
+      width: 40px;
+      height: 40px;
     }
-
-    .icon {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .telegram .icon { color: #0088cc; }
-    .instagram .icon { color: #e1306c; }
-    .whatsapp .icon { color: #25D366; }
-    .email .icon { color: #d14836; }
 
     .back-button {
       margin-top: 3rem;
@@ -83,28 +79,20 @@
   <h1>🌐 ارتباط با حسین سبزواری</h1>
 
   <div class="social-container">
-    <a href="https://t.me/mahsoon53" class="social-item telegram">
-      <div class="icon">📣</div>
-      <div><strong>تلگرام</strong></div>
-      <div>@mahsoon53</div>
+    <a href="https://t.me/mahsoon53" class="social-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />
     </a>
 
-    <a href="https://instagram.com/hosein__sabzevari" class="social-item instagram">
-      <div class="icon">📷</div>
-      <div><strong>اینستاگرام</strong></div>
-      <div>@hosein__sabzevari</div>
+    <a href="https://instagram.com/hosein__sabzevari" class="social-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
     </a>
 
-    <a href="https://wa.me/09215497181" class="social-item whatsapp">
-      <div class="icon">💬</div>
-      <div><strong>واتساپ</strong></div>
-      <div>تماس مستقیم با شاعر</div>
+    <a href="https://wa.me/09215497181" class="social-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
 
-    <a href="mailto:hosein.sabzevari3@gmail.com" class="social-item email">
-      <div class="icon">✉️</div>
-      <div><strong>ایمیل</strong></div>
-      <div>hosein.sabzevari3@gmail.com</div>
+    <a href="mailto:hosein.sabzevari3@gmail.com" class="social-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.svg" alt="Gmail" />
     </a>
   </div>
 
